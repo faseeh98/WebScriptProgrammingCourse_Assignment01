@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Admin Research Projects</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/research-program-admin.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+    <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Admin Research Program Modification</h1>
+    			<p class="lead">Faculty members can update the list of their research projects</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="#">Bio</a>
+        		<a class="nav-item nav-link" href="#">News</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div class="container">
+		<!-- Form -->
+		<form id="newsadminform" action="" method="get">
+			<div class="form-group">
+    			<label for="title">Title</label> 
+    			<input value="" name="title" placeholder="Please enter the project title" class="form-control" id="title"></input>
+    		</div>
+    		<div class="form-group">
+    			<label for="description">Description</label>
+    			<input value="" name="description" placeholder="Please enter the project description" class="form-control" id="description"></input>
+    		</div>
+  			<div class="custom-file">
+  				<input type="file" name="photo" class="custom-file-input" id="photo">
+  				<label class="custom-file-label" for="photo">Upload a project image</label>
+			</div>
+			<br><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<!-- jQuery -->
+<script>
+"use strict";
+// Form Validation
+$(document).ready(function () {
+  	$('#newsadminform').validate({
+      rules: {
+          title: {
+              minlength: 3,
+              maxlength: 40,
+              required: true
+          },
+          description: {
+              minlength: 5,
+              maxlength: 150,
+              required: true
+          }
+         }
+      });
+});
+</script>
+
+</body>
+</html>

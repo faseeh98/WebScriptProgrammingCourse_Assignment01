@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Admin News</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/news-admin.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+    <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Admin News Modification</h1>
+    			<p class="lead">Faculty members can update the news section on their homepage</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="#">Bio</a>
+        		<a class="nav-item nav-link" href="#">News</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div class="container">
+		<!-- Form -->
+		<form id="newsadminform" action="" method="get">
+			<div class="form-group">
+    			<label for="article_headline">Headline</label> 
+    			<input value="" name="headline" placeholder="Please enter the headline" class="form-control" id="article_headline"></input>
+    		</div>
+    		<div class="form-group">
+    			<label for="byline">Byline</label>
+    			<input value="" name="byline" placeholder="Please enter the name of the author" class="form-control" id="byline"></input>
+    		</div>	
+    		<div class="form-group">
+    			<label for="placeline">Placeline</label>
+    			<input value="" name="placeline" placeholder="Please enter where the story originated" class="form-control" id="placeline"></input>
+    		</div>
+    		<div class="form-group">
+    			<label for="lead">Lead</label>
+    			<input value="" name="lead" placeholder="Please briefly explain the most important information" class="form-control" id="lead"></input>
+    		</div>
+    		<div class="form-group">
+    			<label for="body">Body</label>
+    			<textarea value="" name="body" placeholder="Please enter the body text" class="form-control" id="body" rows="10"></textarea>
+  			</div>
+  			<div class="custom-file">
+  				<input type="file" class="custom-file-input" id="customFile">
+  				<label class="custom-file-label" for="customFile">Upload a cover image</label>
+			</div>
+			<br><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<!-- jQuery -->
+<script>
+"use strict";
+// Form Validation
+$(document).ready(function () {
+  	$('#newsadminform').validate({
+      rules: {
+          headline: {
+              minlength: 3,
+              maxlength: 40,
+              required: true
+          },
+          byline: {
+              minlength: 5,
+              maxlength: 30,
+              required: true
+          },
+          placeline: {
+              minlength: 3,
+              maxlength: 20
+          },
+          lead: {
+              minlength: 10,
+              maxlength: 100
+          },
+          body: {
+              minlength: 30,
+              maxlength: 800,
+              required: true
+          }
+         }
+      });
+});
+</script>
+
+</body>
+</html>
