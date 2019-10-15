@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Admin Student Information</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/group-admin.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+    <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Admin Student Information Modification</h1>
+    			<p class="lead">Faculty members can update their list of students and corresponding information</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="#">Bio</a>
+        		<a class="nav-item nav-link" href="#">News</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div class="container">
+		<!-- Form -->
+		<form id="pubadminform" action="" method="get">
+    		<div class="form-group">
+    			<label for="fname">Student First Name</label>
+    			<input value="" name="fname" placeholder="Please enter the first name of the student" class="form-control" id="fname"></input>
+    		</div>
+        <div class="form-group">
+          <label for="lname">Student last Name</label>
+          <input value="" name="lname" placeholder="Please enter the last name of the student" class="form-control" id="lname"></input>
+        </div>
+        <div class="form-group">
+          <label for="snumb">Student Number</label>
+          <input value="" name="snumb" placeholder="Please enter the student number" class="form-control" id="snumb"></input>
+        </div>
+        <div class="form-group">
+          <label for="deg">Student Degree</label>
+          <input value="" name="deg" placeholder="Please enter the degree of the student" class="form-control" id="deg"></input>
+        </div>
+        <div class="form-group">
+          <label for="gradyear">Student Graduation Year</label>
+          <input value="" name="gradyear" placeholder="Please enter the graduation year of the student" class="form-control" id="gradyear"></input>
+        </div>
+			<br><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<!-- jQuery -->
+<script>
+"use strict";
+// Form Validation
+$(document).ready(function () {
+  	$('#pubadminform').validate({
+      rules: {
+          fname: {
+              minlength: 5,
+              maxlength: 20,
+              required: true
+          },
+          lname: {
+              minlength: 5,
+              maxlength: 20
+          },
+          snumb: {
+              minlength: 9,
+              maxlength: 9,
+              required: true,
+              digits: true
+          },
+          deg: {
+              minlength: 5,
+              maxlength: 20
+          },
+          gradyear: {
+              minlength: 4,
+              maxlength: 4,
+              digits: true,
+              required: true
+          }
+         }
+      });
+});
+</script>
+
+</body>
+</html>

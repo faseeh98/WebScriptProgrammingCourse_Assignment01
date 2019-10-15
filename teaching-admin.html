@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Admin Teaching Courses</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/teaching-admin.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+    <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Admin Teaching Courses Modification</h1>
+    			<p class="lead">Faculty members can update the courses they are teaching</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="#">Bio</a>
+        		<a class="nav-item nav-link" href="#">News</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div class="container">
+		<!-- Form -->
+		<form id="adminform" action="" method="get">
+    		<div class="form-group">
+    			<label for="title">Course Title</label>
+    			<input value="" name="title" placeholder="Please enter the title of the course" class="form-control" id="title"></input>
+    		</div>	
+    		<div class="form-group">
+          <label for="cnumb">Course Number</label>
+          <input value="" name="cnumb" placeholder="Please enter the course number" class="form-control" id="cnumb"></input>
+        </div>
+        <div class="form-group">
+          <label for="sem">Semester</label>
+          <select class="custom-select" id="sem" name="sem">
+            <option selected>Please select which semester the course if offered</option>
+            <option value="fall">Fall</option>
+            <option value="winter">Winter</option>
+            <option value="summer">Summer</option>
+          </select>
+      </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input value="" name="year" placeholder="Please enter the year the course is offered" class="form-control" id="year"></input>
+        </div>  
+			<br><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form> 
+	</div>
+
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<!-- jQuery -->
+<script>
+"use strict";
+// Form Validation
+$(document).ready(function () {
+  	$('#adminform').validate({
+      rules: {
+          title: {
+              minlength: 5,
+              maxlength: 20,
+              required: true
+          },
+          cnumb: {
+              required: true,
+              minlength: 5,
+              maxlength: 10
+          },
+          sem: {
+              required: true
+          },
+          year: {
+              minlength: 4,
+              maxlength: 4,
+              digits: true,
+              required: true
+          }
+         }
+      });
+});
+</script>
+
+</body>
+</html>

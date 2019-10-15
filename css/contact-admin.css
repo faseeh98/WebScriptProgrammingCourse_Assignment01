@@ -1,0 +1,18 @@
+.jumbotron {
+	margin-bottom: 0rem !important;
+	background-image: url(https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+	background-size: cover;
+}
+
+nav {
+	margin-bottom: 4rem;
+}
+
+footer {
+	margin-top: 4rem;
+	background-color: lightgrey;
+}
+
+.error {
+    color:#FF0000;
+}
