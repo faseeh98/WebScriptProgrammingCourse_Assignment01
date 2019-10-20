@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Publications</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/pub.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Publications</h1>
+    			<p class="lead">Publication lists of faculty member</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div class="container">
+		<!-- Journals -->
+		<p id="pub-type" class="display-3">Journals</p>
+		<div class="card-group">
+		  <div class="card">
+		    <img src="https://monitor.icef.com/wp-content/uploads/2016/03/mexico.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.mdpi.com/2304-6775/7/4/61">Perceived Challenges to Anglophone Publication at Three Universities in Chile</a></h5>
+		      <p class="card-text">It is well documented that non-Anglophone scholars face enormous pressures to publish in peer-reviewed English-medium journals both for their own advancement and for institutional prestige. Yet many of them receive little support and face big challenges.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Marna Broekhoff</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1747938X19300181-gr1.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.mdpi.com/2304-6775/7/4/60">Competence-Based Management Research in the Web of Science and Scopus Databases</a></h5>
+		      <p class="card-text">This paper presents a bibliometric study, which seeks to characterize papers that address competence-based management and that are indexed in the Web of Science and Scopus databases in terms of scientific production, collaboration, and impact. </p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Vítor Vasata Macchi Silva</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/cc_writing_16x9_0.jpg?itok=HB47Ra8x" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.mdpi.com/2304-6775/7/3/59">Which Are the Tools Available for Scholars? A Review of Assisting Software for Authors during Peer Reviewing Process</a></h5>
+		      <p class="card-text">There is a large amount of Information Technology and Communication (ITC) tools that surround scholar activity. The prominent place of the peer-review process upon publication has promoted a crowded market of technological tools in several formats.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By J. Israel Martínez-López </small>
+		    </div>
+		  </div>
+		</div>
+		<!-- Conference Papers -->
+		<p id="pub-type" class="display-3">Conference Papers</p>
+		<div class="card-group">
+		  <div class="card">
+		    <img src="http://icot2018.org/images/header.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://ntrs.nasa.gov/search.jsp?R=19970018124">Proceedings of 15th International Conference on Thermoelectrics</a></h5>
+		      <p class="card-text">The proceedings include all the technical papers presented at the 15th International Conference on Thermoelectrics, held on 26-29 March 1996 at Pasadena, California, USA. There were 10 invited presentations and over 110 regular presentations in this conference. The presentations were made in 20 technical sessions and are organized accordingly in this proceedings.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Fleurial, Jean-Pierre</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://mjl.clarivate.com/mjl-beta/img_1.ab0afef6d2e7bcab0d0c.png" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://akademiai.com/doi/abs/10.1007/s11192-009-0145-4">Web of Science with the Conference Proceedings Citation Indexes: the case of computer science</a></h5>
+		      <p class="card-text">In September 2008 Thomson Reuters added to the ISI Web of Science (WOS) the Conference Proceedings Citation Indexes for Science and for the Social Sciences and Humanities. This paper examines how this change affects the publication and citation counts of highly cited computer scientists.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Bar-Ilan Judit</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1007%2Fs12224-016-9261-0/MediaObjects/12224_2016_9261_Fig2_HTML.gif" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://pubs.er.usgs.gov/publication/ofr79206">Proceedings of the First membership conference of the National Water Data Exchange</a></h5>
+		      <p class="card-text">This report contains the proceedings of the first membership conference of the National Water Data Exchange (NAWDEX).</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Beverly M. Myers</small>
+		    </div>
+		  </div>
+		</div>
+		<!-- Workshop Papers -->
+		<p id="pub-type" class="display-3">Workshop Papers</p>
+		<div class="card-group">
+		  <div class="card">
+		    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Biogradska_suma.jpg/300px-Biogradska_suma.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="http://www.fao.org/3/v9741e07.htm#paper%201">CONCEPT DOCUMENT FOR THE FORMATION OF AN EASTERN AND SOUTHERN AFRICA FOREST PEST AND DISEASE MANAGEMENT NETWORK</a></h5>
+		      <p class="card-text">The idea of an African network on forestry pest management first received consideration at the "Exotic Aphid Pests of Conifers Workshop" held in Kenya, June 3-6 1991 organised by the Kenya Forestry Research Institute (KEFRI) in technical collaboration with FAO and IIBC. This workshop coincided with the launching of the FRIM/ODA/IIBC.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By G. B. Allard</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://image.cnbcfm.com/api/v1/image/106099075-1566923730540gettyimages-1164002478.jpeg?v=1566923789&w=1400&h=950" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="http://www.fao.org/3/v9741e07.htm#paper%202">SOME EXAMPLES OF SUCCESSFUL FORESTRY NETWORKS</a></h5>
+		      <p class="card-text">FAO, through both is Regular Programme and Field Programme activities, has had considerable experience in the organization of networks in agriculture, forestry and fisheries. What I would like to discuss in this session is three examples of forestry networks; their structure, activities and funding.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By William M. Ciesla</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://images.slideplayer.com/27/8984060/slides/slide_1.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="http://www.fao.org/3/v9741e07.htm#paper%203">EXPERIENCES FROM FORESTRY RESEARCH NETWORKS</a></h5>
+		      <p class="card-text">It is observed that poor inter-African communication systems and lack of fora for information exchange is leading to duplication of efforts and waste of scarce resources. Moreover current under-funding of forestry research programmes and related factors have weakened the ability of many institutions in Sub-Saharan Africa (SSA) to respond to pest outbreaks.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By J. A Odera</small>
+		    </div>
+		  </div>
+		</div>
+		<!-- Posters -->
+		<p id="pub-type" class="display-3">Posters</p>
+		<div class="card-group">
+		  <div class="card">
+		    <img src="https://www.craftofscientificposters.com/uploads/7/6/6/8/76688989/morphological.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.craftofscientificposters.com/uploads/7/6/6/8/76688989/morphological.jpg">Morphological Image Recognition of Deep Water Reef Corals</a></h5>
+		      <p class="card-text">Deep water coral reefs (30-100m) could shelter commercial fish stocks and provide coral larvae for recovering shallow reefs.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Jeffrey W. Kaeli</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://www.craftofscientificposters.com/uploads/7/6/6/8/76688989/9184727_orig.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.craftofscientificposters.com/uploads/7/6/6/8/76688989/9184727_orig.jpg">Colling Effect of Dirt Purge Holes on the Tips of Gas Turbine Blades</a></h5>
+		      <p class="card-text">At higher combustion temperatures, these engines generate more power and use less fuel</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Eric Couch</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://www.craftofscientificposters.com/uploads/7/6/6/8/76688989/eany2.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.craftofscientificposters.com/uploads/7/6/6/8/76688989/eany2.jpg">Engineering Ambassador Network: Year 2</a></h5>
+		      <p class="card-text">The Engineering Ambassador Network is a group of professional development program in whic undergraduate engineering students learn advanced communication strategies for K-12 outreach</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Christine Haas</small>
+		    </div>
+		  </div>
+		</div>
+		<!-- Technical Reports -->
+		<p id="pub-type" class="display-3">Technical Reports</p>
+		<div class="card-group">
+		  <div class="card">
+		    <img src="https://www.globalxetfs.com/content/files/preferred-image-2-1.png" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.bankofcanada.ca/2019/04/technical-report-115/">Bond Funds and Fixed-Income Market Liquidity: A Stress-Testing Approach</a></h5>
+		      <p class="card-text">This report provides a detailed technical description of a stress test model for investment funds called Ceto. The model quantifies how asset sales from investment funds could amplify a sudden decline in asset prices through the liquidity risk premium of the corporate bond market.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Rohan Arora</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://report.nih.gov/crs/images/2018_1_graph_circle.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.usda.gov/sites/default/files/documents/USDA-Public-Access-Implementation-Plan.pdf">Implementation Plan to Increase Public
+Access to Results of USDA-funded
+Scientific Research</a></h5>
+		      <p class="card-text">This plan describes USDA’s approach to increase access to scholarly publications and digitally
+formatted scientific data resulting from unclassified research results supported wholly or in part by
+USDA funds, to the extent feasible and consistent with law; agency mission; resource constraints;
+and U.S. national, homeland, and economic security.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By United States Department of Agriculture</small>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="https://slideplayer.com/slide/10743571/37/images/6/Risk+Assessment+within+the+Risk+Management+Framework.jpg" class="card-img-top">
+		    <div class="card-body">
+		      <h5 class="card-title"><a href="https://www.bankofcanada.ca/2018/11/technical-report-113/">The Framework for Risk Identification and Assessment</a></h5>Risk assessment models are an important component of the Bank’s analytical tool kit for assessing the resilience of the financial system. We describe the Framework for Risk Identification and Assessment (FRIDA), a suite of models developed at the Bank of Canada to quantify the impact of financial stability risks to the broader economy and a range of financial system participants (households, businesses and banks).</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">By Cameron MacDonald</small>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+</body>
+</html>

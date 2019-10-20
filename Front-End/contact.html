@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Contact Us</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Contact Us</h1>
+    			<p class="lead">Facutly Contact Information</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div class="container">
+		<div id="contact-info">
+			<p class="display-4"><strong>Dorsey Meyers</strong></p>
+			<br><br>
+			<p class="lead"><i class="fas fa-building"></i> Faculty of Business and IT</p>
+			<p class="lead"><i class="fas fa-envelope-open-text"></i> meyers.dorsey@rne.ca</p>
+			<p class="lead"><i class="fas fa-phone-square-alt"></i> 416-424-1236</p>
+			<p class="lead"><i class="fas fa-map-pin"></i> 6 Adelaide St W, Toronto, ON M5H 1L6</p>
+			<br>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.8885643284957!2d-79.38108528423935!3d43.65048676062367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb32e9d2b087%3A0x3dc56de40e09ca7b!2s6%20Adelaide%20St%20W%2C%20Toronto%2C%20ON%20M5H%201L6!5e0!3m2!1sen!2sca!4v1571533308888!5m2!1sen!2sca" width="90%" height="90%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+		</div>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+</body>
+</html>

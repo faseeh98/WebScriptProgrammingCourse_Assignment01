@@ -1,0 +1,22 @@
+body {
+	padding-bottom: 8%;
+}
+
+table {
+	margin-top: 3%;
+}
+
+.jumbotron {
+	margin-bottom: 0rem !important;
+	background-image: url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1009&q=80);
+	background-size: cover;
+}
+
+nav {
+	margin-bottom: 4rem;
+}
+
+footer {
+	margin-top: 4rem;
+	background-color: lightgrey;
+}

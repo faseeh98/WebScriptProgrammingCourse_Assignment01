@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Press</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/press.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Press</h1>
+    			<p class="lead">Publications of Faculty Members</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div id="body-content" class="container">
+		<!-- News Table -->
+		<div class="table-responsive-md">
+			<table class="table table-hover table-striped">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col"></th>
+			      <th scope="col">Title</th>
+			      <th scope="col">Year</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td><img id="press-photo" src="images/press/press01.jpg"></td>
+			      <td><a href="https://www.durhamregion.com/news-story/4469248-uoit-researchers-crack-down-on-password-security-in-wake-of-heartbleed/">UOIT researchers crack down on password security in wake of Heartbleed</a></td>
+			      <td>2014</td>
+			    </tr>
+			    <tr>
+			      <td><img id="press-photo" src="images/press/press02.jpg"></td>
+			      <td><a href="https://www.wired.com/2006/04/your-thoughts-are-your-password/">Your Thoughts Are Your Password</a></td>
+			      <td>2006</td>
+			    </tr>
+			    <tr>
+			      <td><img id="press-photo" src="images/press/press03.jpg"></td>
+			      <td><a href="https://www.newswire.ca/news-releases/biomedical-zone-heathbound-start-up-challenge-2019-2020-tackles-technology-for-mental-health-and-addictions-807176215.html">Biomedical Zone HeathBound Start Up Challenge 2019/2020 Tackles Technology for Mental Health and Addictions</a></td>
+			      <td>2019</td>
+			    </tr>
+			    <tr>
+			      <td><img id="press-photo" src="images/press/press04.jpg"></td>
+			      <td><a href="https://www.newswire.ca/news-releases/new-website-makes-it-easier-for-albertans-to-find-a-doctor-808218001.html">New website makes it easier for Albertans to find a doctor</a></td>
+			      <td>2019</td>
+			    </tr>
+			    <tr>
+			      <td><img id="press-photo" src="images/press/press05.jpg"></td>
+			      <td><a href="https://www.newswire.ca/news-releases/tile-and-skullcandy-expand-partnership-to-ensure-adventure-seekers-are-also-finders-889088176.html">Tile and Skullcandy Expand Partnership to Ensure Adventure Seekers Are Also Finders</a></td>
+			      <td>2019</td>
+			    </tr>
+			    <tr>
+			      <td><img id="press-photo" src="images/press/press06.jpg"></td>
+			      <td><a href="https://www.newswire.ca/news-releases/brandon-daniels-accepted-into-forbes-technology-council-827661367.html">Brandon Daniels Accepted Into Forbes Technology Council</a></td>
+			      <td>2006</td>
+			    </tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+</body>
+</html>

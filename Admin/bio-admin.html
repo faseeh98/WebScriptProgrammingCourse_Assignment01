@@ -2,9 +2,9 @@
 <html lang="en-US" ng-app="myApp">
 
 <head>
-	<title>Admin Research Projects</title>
+	<title>Admin Biography</title>
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="css/research-program-admin.css">
+	<link rel="stylesheet" type="text/css" href="css/bio-admin.css">
 	<!-- AngularJS Library -->
 	<script src="app/lib/angular.min.js"></script>
 	<!-- JS -->
@@ -13,9 +13,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<!-- Bootstrap -->
     <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
-    <!-- Font Awesome -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,8 +27,8 @@
 	<header>
 		<div class="jumbotron jumbotron-fluid">
   			<div class="container">
-    			<h1 class="display-4">Admin Research Program Modification</h1>
-    			<p class="lead">Faculty members can update the list of their research projects</p>
+    			<h1 class="display-4">Admin Biography Modification</h1>
+    			<p class="lead">Faculty members can update their biogrpahy and/or profile picture</p>
   			</div>
 		</div>
 	</header>
@@ -44,8 +47,14 @@
   		<!-- Items -->
   		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
     		<div class="navbar-nav">
-        		<a class="nav-item nav-link" href="#">Bio</a>
-        		<a class="nav-item nav-link" href="#">News</a>
+        		<a class="nav-item nav-link" href="bio-admin.html">Bio</a>
+        		<a class="nav-item nav-link" href="news-admin.html">News</a>
+        		<a class="nav-item nav-link" href="pub-admin.html">Publications</a>
+        		<a class="nav-item nav-link" href="press-admin.html">Press</a>
+        		<a class="nav-item nav-link" href="research-program-admin.html">Reseach Program</a>
+        		<a class="nav-item nav-link" href="group-admin.html">Group</a>
+        		<a class="nav-item nav-link" href="teaching-admin.html">Teaching</a>
+        		<a class="nav-item nav-link" href="contact-admin.html">Contact</a>
     		</div>
   		</div>
 		</div>
@@ -54,18 +63,14 @@
 <!-- Body -->
 	<div class="container">
 		<!-- Form -->
-		<form id="newsadminform" action="" method="get">
+		<form id="bioadminform"  action="" method="get">
 			<div class="form-group">
-    			<label for="title">Title</label> 
-    			<input value="" name="title" placeholder="Please enter the project title" class="form-control" id="title"></input>
-    		</div>
-    		<div class="form-group">
-    			<label for="description">Description</label>
-    			<input value="" name="description" placeholder="Please enter the project description" class="form-control" id="description"></input>
-    		</div>
+    			<label for="newBio">Biography</label>
+    			<textarea value="" name="bio" placeholder="Please enter your new bio" class="form-control" id="newBio" rows="4"></textarea>
+  			</div>
   			<div class="custom-file">
-  				<input type="file" name="photo" class="custom-file-input" id="photo">
-  				<label class="custom-file-label" for="photo">Upload a project image</label>
+  				<input type="file" class="custom-file-input" id="customFile">
+  				<label class="custom-file-label" for="customFile">Choose file</label>
 			</div>
 			<br><br>
 			<button type="submit" class="btn btn-primary">Submit</button>
@@ -82,16 +87,11 @@
 "use strict";
 // Form Validation
 $(document).ready(function () {
-  	$('#newsadminform').validate({
+  	$('#bioadminform').validate({
       rules: {
-          title: {
-              minlength: 3,
-              maxlength: 40,
-              required: true
-          },
-          description: {
+          bio: {
               minlength: 5,
-              maxlength: 150,
+              maxlength: 250,
               required: true
           }
          }

@@ -1,0 +1,54 @@
+body {
+	padding-bottom: 8%;
+}
+
+table {
+	margin-top: 3%;
+}
+
+#news-header {
+	margin-top: 5%;
+}
+
+.jumbotron {
+	margin-bottom: 0rem !important;
+	background-image: url(https://images.unsplash.com/photo-1550123309-3cf75e1d0c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+	background-size: cover;
+}
+
+#headshot {
+	width: 90%;
+	height: auto;
+}
+
+#bio {
+	clear: both;
+}
+
+.column {
+	float: left;
+	padding: 10px;
+}
+
+.column.side {
+	width: 25%;
+}
+
+.column.middle {
+	width: 75%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav {
+	margin-bottom: 4rem;
+}
+
+footer {
+	margin-top: 4rem;
+	background-color: lightgrey;
+}

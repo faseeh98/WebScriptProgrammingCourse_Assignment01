@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Research Interest and Programs</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/research.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Research Interest and Programs</h1>
+    			<p class="lead">Research Interest and Programs of Faculty Members</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div id="body-content" class="container">
+		<h3 class="display-4 text-center" id="interest-header">Research Interest</h3>
+		<p>My primary research interest is in the area of networks and distributed computing systems. New generations of networked computing systems, aided by the global presence of the Internet infrastructure, are playing an increasingly important role in the society. Such increasing reach is making the demand for robust operation of such systems more stringent than ever. Failures or anomalies in these systems can now have enormous cost and serious consequences on our society. 
+		</p>
+		<p>
+			On the other hand, the dramatic increase in heterogeneity of the networked devices such as handhelds and embedded computers is making the building of integrated information systems ever more challenging. Investigating the principles underlying the design and implementation of such robust and pervasive networked computing systems is the general goal of my research. How to build a reliable system using unreliable components and how local algorithms based on local knowledge can derive globally emergent system characteristics such as reliability, availability, efficient resource utilization and quality assurance, are the central questions that drive most of my research activities. Because real-world systems are complex, answering these questions requires careful design and implementation that attends the details of the real scenario. I also use theoretical analysis and simulation that allows exploration of design parameters in wider ranges and in isolation, and helps to understand the impact of each parameter on the observed behavior of the system. 
+		</p>
+
+		<div class="row justify-content-center">
+	    		<img id="imgi" class="mx-auto" src="images\research\carousel\1.jpg">
+	    		<img id="imgi" src="images\research\carousel\2.jpg">
+	    		<img id="imgi" src="images\research\carousel\3.jpg">
+    	</div>
+
+    	<h3 class="display-4 text-center" id="interest-header">Research Projects</h3>
+
+		<div id="accordion">
+		  <div class="card">
+		    <div class="card-header" id="headingOne">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		          USING Q-METHODOLOGY TO UNDERSTAND ENVIRONMENTAL OPPOSITION TO
+FRACKING
+		        </button>
+		      </h5>
+		    </div>
+
+		    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+		      <div class="card-body">
+		      	<img id="project-pic" src="https://ichef.bbci.co.uk/news/624/media/images/65309000/gif/_65309507_shale_gas_extraction464.gif">
+		      	<p><a href="https://nres.illinois.edu/files/documents/nres-online-research-mclaughlin.pdf">LINK TO PROJECT</a></p>
+		      	<p>
+		      		The recent expansion in the development of unconventional sources of natural gas in the United
+					States, specifically the Marcellus Shale-rich state of Pennsylvania, has generated policy and public
+					controversy. The media discourse about fracking in central Westmoreland County has often been
+					negative, based on media coverage, newspaper articles, and the development of numerous
+					opposition groups. This study uses Q-methodology to examine emergent perspectives and subdiscourses within the fracking opposition debate in central Westmoreland County, PA. The
+					analysis reveals four different narratives of perspectives amongst people actively involved in
+					locally opposing fracking, labeled (1) Future Fears; (2) Local Resistor (3) Community Concerns;
+					and (4) Distrust Stakeholders and Turn towards Renewables. The conflicts that emerge across
+					these four extracted factors are indicative of deeper discourse within the fracking debate that
+					signifies diversity in motivations, values, and convictions. The disparity in viewpoints point to
+					fundamental disagreements over standard fracking processes, stakeholder decisions, and the future
+					of fracking. Unraveling these core areas of dissent can offer tangible data upon and insights which
+					policymakers can base future fracking campaigns. 
+		      	</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingTwo">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		          EFFECT OF LAND MANAGEMENT PRACTICES ON SOIL MOISTURE RETENTION 
+		        </button>
+		      </h5>
+		    </div>
+		    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+		      <div class="card-body">
+		        <img id="project-pic" src="https://www.frontiersin.org/files/Articles/433079/fpls-10-00140-HTML/image_m/fpls-10-00140-g002.jpg">
+		      	<p><a href="https://nres.illinois.edu/files/documents/nres-online-research-crutchfield.pdf">LINK TO PROJECT</a></p>
+		      	<p>
+		      		Soil sustainability will play a key role in maintaining crop production in the face of
+					decreased precipitation due to global climate change. A field study that compared fields with
+					similar soil types farmed with varying soil conserving practices was conducted in central Ohio to
+					determine if practices such as no-till and cover crops can influence soil moisture through the
+					build-up of soil organic matter. Soil moisture samples were taken 23 times throughout the season
+					at depths of 0-20, 20-40, and 40-60 cm. Soil samples for organic matter determination were
+					collected once at the end of the growing season. This study found that soil water content was not
+					increased by use of reduced tillage or cover crops when compared to fields that had not used
+					conservation practices. However, study design and the wet season, central Ohio received above
+					average rainfall in 2015, limited the study’s ability to explore relationships between SOC and
+					moisture retention and thus prevents drawing conclusions about prospects for management to
+					improve soil water holding capacity
+				</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingThree">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		          PEREGRINE FALCON DISPERSAL AND HABITAT IMPRINTING
+		        </button>
+		      </h5>
+		    </div>
+		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+		      <div class="card-body">
+		      	<img id="project-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYbc_bOhAQ9MzgsZOg0E_cxJoPMDIqUTBBwUc9Vr7Yxq6DoH_og">
+		      	<p><a href="https://nres.illinois.edu/files/documents/nres-online-research-devine.pdf">LINK TO PROJECT</a></p>
+		      	<p>
+		      		Following the DDT-induced population collapse in the mid-twentieth century, peregrine
+					falcons were extirpated throughout Pennsylvania. As a result of decades of recovery efforts,
+					peregrine falcon populations have experienced rapid growth, and their populations are still
+					expanding. Yet, the majority of occupied nest sites are no longer on cliff sites along major river
+					corridors, but rather on anthropomorphic structures, such as bridges, buildings and smokestacks.
+					This study focuses on the recovering peregrine falcon (Falco peregrinus) population in eastern
+					North America. This study examines peregrine falcons’ proclivity for habitat imprinting on
+					anthropomorphic structures for breeding. The study also examines sex-biased differences in
+					dispersal from banding to breeding site.
+					Archival data from the Pennsylvania Game Commission’s (PGC) Peregrine Falcon
+					Research Management Program annual reports, 1994-2013, were used to assess peregrine
+					behavior. Female peregrine falcons showed significantly longer average dispersal distances
+					(243.7 km, n=54) than males (111.2 km, n=32). Peregrine falcons banded on anthropomorphic
+					structures showed statistically significant nesting preferences to urban structures, however not
+					absolute (n=87). These findings have important management implications for meeting
+					Pennsylvania’s targeted population goals for endangered species delisting. Since a primary
+					component of recovery is to increase cliff nest sites, the findings may assist in efforts to identify
+					suitable sites and determine limiting factors to achieve the targeted population recovery
+				</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<script>
+	$('.collapse').collapse()
+</script>
+
+</body>
+</html>

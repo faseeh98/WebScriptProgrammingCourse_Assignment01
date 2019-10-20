@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Research Group</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/group.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Research Group</h1>
+    			<p class="lead">Information about the students the facutly has advised</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div id="body-content" class="container">
+		<!-- Courses Table -->
+		<table class="table table-hover table-striped table-bordered table-dark" id="students_table">
+			<caption>Click the "student name" header to sort students chronologically</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col"><button onclick="sortTable()" class="btn btn-light">Student Name</button></th>
+		      <th scope="col">Student Number</th>
+		      <th scope="col">Degree/Major</th>
+		      <th scope="col">Year of graduation</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td scope="row">Meriab Helebo</td>
+		      <td>100423821</td>
+		      <td>Networking and I.T Security</td>
+		      <td>2020</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Jack Sery</td>
+		      <td>100412321</td>
+		      <td>Commerce</td>
+		      <td>2016</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Jeremy Tristan</td>
+		      <td>100423341</td>
+		      <td>I.T Management</td>
+		      <td>2017</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Jack Dorsey</td>
+		      <td>123423821</td>
+		      <td>Networking and I.T Management</td>
+		      <td>2015</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Sander Pichai</td>
+		      <td>101239821</td>
+		      <td>Human Resources</td>
+		      <td>2016</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Tim Cook</td>
+		      <td>184223821</td>
+		      <td>Agriculture</td>
+		      <td>2021</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Barack Obama</td>
+		      <td>104927821</td>
+		      <td>Risk Management</td>
+		      <td>2019</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Kanye West</td>
+		      <td>421823821</td>
+		      <td>Biomedical Sciences</td>
+		      <td>2020</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Shawn Mendes</td>
+		      <td>592743821</td>
+		      <td>Automotive Engineering</td>
+		      <td>2019</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Rakim Meyers</td>
+		      <td>284628821</td>
+		      <td>Agriculture</td>
+		      <td>2021</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Shawn Carter</td>
+		      <td>1947237421</td>
+		      <td>Biomedical Sciences</td>
+		      <td>2016</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Lisa Raitt</td>
+		      <td>947223821</td>
+		      <td>Risk Management</td>
+		      <td>2018</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Faseeh Ahmed</td>
+		      <td>730164821</td>
+		      <td>I.T Management</td>
+		      <td>2015</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("students_table");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[3];
+      y = rows[i + 1].getElementsByTagName("TD")[3];
+      if (Number(x.innerHTML) < Number(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Homepage</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Homepage</h1>
+    			<p class="lead">Web Content Management</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div id="body-content" class="container">
+		<div class="row">
+			<!-- Headhsot -->
+			<div class="column side">
+				<img class="rounded-circle" id="headshot" src="images/prof-headshot.jpg">
+			</div>
+			<!-- Bio -->
+			<div class="column middle">
+				<h4 class="display-4">Biography</h4>
+				<p id="bio">
+					Dan Grossman is a Professor in the <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science & Engineering</a> at the <a href="https://www.washington.edu/">University of Washington</a> where he has been a faculty member since 2003. He is the Allen School's Vice Director. From 2013–2018, he held the J. Ray Bowen Professorship for Innovation in Engineering Education.
+
+					Dan completed his Ph.D. at <a href="https://www.cornell.edu/">Cornell University</a> and his undergraduate studies at <a href="https://www.rice.edu/">Rice University</a>. His research interests lie in the area of programming languages, ranging from theory to design to implementation. He has collaborated actively with researchers in several other disciplines of computer science, particularly computer architecture on problems at the hardware/software interface.
+				</p>
+			</div>
+		</div>
+		<!-- News Table -->
+		<h3 class="display-4 text-center" id="news-header">News</h3>
+		<table class="table table-hover table-dark" id="news_table">
+			<caption>Click the title header to sort news articles chronologically</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col">ID</th>
+		      <th scope="col"><button onclick="sortTable()" class="btn btn-light">Title</button></th>
+		      <th scope="col">Date</th>
+		      <th scope="col">Topic</th>
+		      <th scope="col">Source</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		   	  <td>3</td>
+		      <td><a href="https://www.cnn.com/uk/live-news/brexit-deal-vote-boris-johnson-dle-oct-19-intl-gbr/index.html">Brexit vote setback for Boris Johnson in Parliament</a></td>
+		      <td>10/19/2019</td>
+		      <td>Brexit</td>
+		      <td><a href="https://www.cnn.com/">CNN</a></td>
+		    </tr>
+		    <tr>
+		      <td>4</td>
+		      <td><a href="https://ca.reuters.com/article/topNews/idCAKBN1WY0HP-OCATP">Dirty tactics and awkward moments dominate Canada's meandering campaign</a></td>
+		      <td>10/19/2019</td>
+		      <td>Elections</td>
+		      <td><a href="https://ca.reuters.com/">Reuters Canada</a></td>
+		    </tr>
+		    <tr>
+		      <td>1</td>
+		      <td><a href="https://nationalpost.com/news/swedish-activist-greta-thunberg-in-edmonton-for-climate-rally-counter-rally-planned">No mention of oilsands as activist Greta Thunberg calls for climate action in Alberta</a></td>
+		      <td>10/18/2019</td>
+		      <td>Climate Change</td>
+		      <td><a href="https://nationalpost.com/">National Post</a></td>
+		    </tr>
+		    <tr>
+		      <td>2</td>
+		      <td><a href="https://globalnews.ca/news/6052577/boeing-test-pilot-737-max/">Boeing test pilot expressed concern about 737 MAX flight system, messages show</a></td>
+		      <td>10/18/2019</td>
+		      <td>Technology</td>
+		      <td><a href="https://globalnews.ca/">Global News</a></td>
+		    </tr>
+		    <tr>
+		      <td>5</td>
+		      <td><a href="https://www.thesun.co.uk/tech/10165173/orionid-meteor-shower-orionids-peak-halleys-comet-dates/">Fireballs from Halley’s Comet will soar across sky TOMORROW – how to spot Orionid meteor shower</a></td>
+		      <td>10/19/2019</td>
+		      <td>Science</td>
+		      <td><a href="https://www.thesun.co.uk/">The Sun</a></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("news_table");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+</body>
+</html>

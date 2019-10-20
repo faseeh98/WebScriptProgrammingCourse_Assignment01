@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+
+<head>
+	<title>Teaching</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/teaching.css">
+	<!-- AngularJS Library -->
+	<script src="app/lib/angular.min.js"></script>
+	<!-- JS -->
+	<script src="app/bio-admin-app.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="app/lib/Bootstrap4/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c0f0c29721.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<!-- Header -->
+	<header>
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    			<h1 class="display-4">Teaching</h1>
+    			<p class="lead">List of courses the faculty has taight in past and is currently teaching</p>
+  			</div>
+		</div>
+	</header>
+
+<!-- Navbar -->
+	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+		<!-- Navbar brand -->
+		<div class="navbar-header">
+			 <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Faculty WCM</a>
+		</div>
+  		<!-- Hamburger -->
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<!-- Items -->
+  		<div class="collapse navbar-collapse justify-content-end" id="navhamburger">
+    		<div class="navbar-nav">
+        		<a class="nav-item nav-link" href="index.html">Home</a>
+        		<a class="nav-item nav-link" href="pub.html">Publications</a>
+        		<a class="nav-item nav-link" href="press.html">Press</a>
+        		<a class="nav-item nav-link" href="research.html">Research Interest and Programs</a>
+        		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+        		<a class="nav-item nav-link" href="group.html">Research Group</a>
+        		<a class="nav-item nav-link" href="contact.html">Contact</a>
+    		</div>
+  		</div>
+		</div>
+	</nav>
+
+<!-- Body -->
+	<div id="body-content" class="container">
+		<!-- Courses Table -->
+		<table class="table table-hover table-dark" id="courses_table">
+			<caption>Click the title header to sort courses chronologically</caption>
+		  <thead>
+		    <tr>
+		      <th scope="col"><button onclick="sortTable()" class="btn btn-light">Title</button></th>
+		      <th scope="col">Course Number</th>
+		      <th scope="col">Semester</th>
+		      <th scope="col">Year</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td scope="row">Statistics</td>
+		      <td>BUSI 3120</td>
+		      <td>Fall</td>
+		      <td>2015</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Business Communications</td>
+		      <td>BUSI 1320</td>
+		      <td>Fall</td>
+		      <td>2016</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Accounting for I.T</td>
+		      <td>INFR 2100</td>
+		      <td>Winter</td>
+		      <td>2017</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Introduction to Networking</td>
+		      <td>INFR 1411</td>
+		      <td>Fall</td>
+		      <td>2018</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Web and Script Programming</td>
+		      <td>INFR 3120</td>
+		      <td>Winter</td>
+		      <td>2018</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Business Computer Applications</td>
+		      <td>BUSI 1520</td>
+		      <td>Summer</td>
+		      <td>2018</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Business Integration and Analytics</td>
+		      <td>BUSI 2500</td>
+		      <td>Fall</td>
+		      <td>2019</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Introduction to Project Management</td>
+		      <td>INFR 2550</td>
+		      <td>Winter</td>
+		      <td>2019</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Discrete Mathematics</td>
+		      <td>INFR 2100</td>
+		      <td>Summer</td>
+		      <td>2019</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Introduction to Computer Security</td>
+		      <td>INFR 2600</td>
+		      <td>Fall</td>
+		      <td>2014</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Accounting for I.T</td>
+		      <td>INFR 2100</td>
+		      <td>Winter</td>
+		      <td>2014</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">Accounting for I.T</td>
+		      <td>INFR 2100</td>
+		      <td>Winter</td>
+		      <td>2013</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+	<footer class="page-footer font-small blue fixed-bottom">
+		<div class="footer-copyright text-center py-3">© 2019 {{authors}}
+  		</div>
+	</footer>
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("courses_table");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[3];
+      y = rows[i + 1].getElementsByTagName("TD")[3];
+      if (Number(x.innerHTML) < Number(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+</body>
+</html>
